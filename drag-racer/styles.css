@@ -1,0 +1,64 @@
+body {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcecfc+42,ff7cd8+100 */
+  background: #fcecfc; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #fcecfc 42%, #ff7cd8 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  #fcecfc 42%,#ff7cd8 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  #fcecfc 42%,#ff7cd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#ff7cd8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 65px;
+  text-align: center;
+  text-shadow: 4px 4px white;
+  padding: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.game-instructions {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 6px solid #ff0080;
+  margin-bottom: 100px;
+}
+
+.racer_table td {
+  background-color: #ebebe0;
+  height: 100px;
+  width: 100px;
+}
+
+/*.racer_table td.active {
+  background-color: black;
+  background-image: url('lil-poundcake.jpg');
+  background-size: 100px 100px;
+}*/
+
+tr#player2_strip td {
+  border-top: 3px solid yellow;
+}
+
+.racer_table {
+  background-color: #ebebe0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.track-container {
+
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding-top: 75px;
+  position: fixed;
+  /*font-weight: bold;*/
+}
