@@ -8,9 +8,13 @@
 
 .techs {
   font-style: italic;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .project {
   margin-top: 50px;
+}
+
+.card-block {
+
 }

@@ -1,30 +1,40 @@
-    <!-- Download Section -->
-    <section id="projects" class="content-section text-center">
-        <div class="projects-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Projects</h2>
-                    <div class='project-holder row card-deck-wrapper'>
-                    <div class="card-deck">
-                    {% assign sorted = {site.projects | sort:'number'} %}
-                    {% for project in sorted %}
-                    <div class="project card col-xs-6 col-md-6">
-                      <h3 class="card-header">{{ project.title }}</h3>
-                      <img class='card-img-top project-screenshot' src="/img/{{ project.screenshot }}" alt='{{ project.title }}' />
-                      <br />
-                      <br />
-                      <div class="card-block">
-                        <p class="card-text">{{ project.description }}</p>
-                        <p class='techs'>Technologies used: {{ project.technologies }}</p>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <a class="btn btn-secondary" href="{{ project.deployed }}">Preview</a> <a class="btn btn-secondary" href="{{ project.github }}">Code</a>
-                        </div>
-                      </div>
+<section id="projects" class="content-section text-center">
+    <div class="projects-section">
+        <div class="container">
+            <h2>Projects</h2>
+                <div class='project-holder row card-deck-wrapper'>
+                <div class="card-deck">
+                {% assign sorted = {site.projects | sort:'number'} %}
+                {% for project in sorted %}
+                <div class="project card col-xs-6 col-md-6">
+                  <h3 class="card-header">{{ project.title }}</h3>
+                  <img class='card-img-top project-screenshot' src="/img/{{ project.screenshot }}" alt='{{ project.title }}' />
+                  <br />
+                  <br />
+                  <div class="card-block">
+                    <p class="card-text">{{ project.description }}</p>
+                    {% if project.front_end != null %}
+                        <p class='techs'>Front End: 
+                        {% for tech in project.front_end %}
+                        <span class="label label-default">{{tech}}</span>
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+                    {% if project.back_end != null %}
+                        <p class='techs'>Back End: 
+                        {% for tech in project.back_end %}
+                        <span class="label label-default">{{tech}}</span>
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a class="btn btn-secondary" href="{{ project.deployed }}">Live Preview</a> <a class="btn btn-secondary" href="{{ project.github }}">Source</a>
                     </div>
-                    {% endfor %}
-                    </div>
-                    </div>
+                  </div>
                 </div>
-            </div>
+                {% endfor %}
+                </div>
+                </div>
         </div>
-    </section>
+    </div>
+</section>
