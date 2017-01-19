@@ -1,20 +1,2 @@
 {% include css/bootstrap.min.css %}
 {% include css/grayscale.css %}
-
-.project-screenshot {
-  width: 180px;
-  height: 120px;
-}
-
-.techs {
-  font-style: italic;
-  font-size: 1.2em;
-}
-
-.project {
-  margin-top: 50px;
-}
-
-.card-block {
-
-}
