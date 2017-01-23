@@ -6,7 +6,7 @@
                 <div class="card-deck">
                 {% assign sorted = {site.projects | sort:'number'} %}
                 {% for project in sorted %}
-                <div class="project card col-xs-6 col-md-6">
+                <div class="project card col-xs-12 col-md-6">
                   <h3 class="card-header">{{ project.title }}</h3>
                   <img class='card-img-top project-screenshot' src="/img/{{ project.screenshot }}" alt='{{ project.title }}' />
                   <br />
@@ -19,6 +19,10 @@
                         <span class="label label-default">{{tech}}</span>
                         {% endfor %}
                     </p>
+                    {% else %}
+                    <br />
+                    <br />
+                    <br />
                     {% endif %}
                     {% if project.back_end != null %}
                         <p class='techs'>Back End: 
@@ -26,6 +30,10 @@
                         <span class="label label-default">{{tech}}</span>
                         {% endfor %}
                     </p>
+                    {% else %}
+                    <br />
+                    <br />
+                    <br />
                     {% endif %}
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <a class="btn btn-secondary" href="{{ project.deployed }}">Live Preview</a> <a class="btn btn-secondary" href="{{ project.github }}">Source</a>
