@@ -65,10 +65,6 @@ var getLoser = function() {
   }
 }
 
-// function makeCellActive(strip, currentLocation) {
-//   $(strip + ' td:nth-child(' + currentLocation + ')').addClass('active');
-// }
-
 function makeNewestCellActive(player) {
   currentLocation = player.getCurrentLocation();
   $target = $(player.strip + ' td:nth-child(' + currentLocation + ')');
@@ -77,8 +73,6 @@ function makeNewestCellActive(player) {
 
 function progressPlayer(player) {
   player.advancePlayer();
-  // var newLocation = player.getCurrentLocation();
-  // makeCellActive(player.strip, newLocation);
   makeNewestCellActive(player);
 }
 
@@ -121,7 +115,6 @@ $( document ).ready(function() {
     else {
       var code = event.keyCode || event.which;
       if(code === 81) {
-        // $(player1.strip + ' td').removeClass('active');
         $(player1.strip + ' td').css('background-image', '');
         progressPlayer(player1);
       }
@@ -132,5 +125,4 @@ $( document ).ready(function() {
       }
     }
   });
-
 });
